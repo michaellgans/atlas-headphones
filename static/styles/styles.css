@@ -2,16 +2,33 @@
 
 :root {
     --color-white: #FFFFFF;
+    --white-font: #FFF;
+    --button-color: #FF6565;
+    --border: solid 2px red;
 }
 
 /* Fonts */
+@font-face {
+    font-family: sans-pro;
+    src: url(../fonts/SourceSansPro-Regular.otf);
+}
+
+@font-face {
+    font-family: sans-pro-light;
+    src: url(../fonts/SourceSansPro-Light.otf);
+}
+
+@font-face {
+    font-family: sans-pro-extra-light;
+    src: url(../fonts/SourceSansPro-ExtraLight.otf);
+}
 
 /* Background */
 
 body {
-    /* display: flex; */
     background-image: url(../images/background.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     margin: 0px;
     width: 100%;
@@ -23,27 +40,33 @@ body {
 .header-container {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* main axis */
-    align-items: center; /* cross axis */
-    align-content: center; /* line behavior */
-    width: 100%;
+    justify-content: space-around;
+    padding-top: 1.68rem;
 }
 
 .logo {
-    
+    width: 10.06rem;
 }
 
 .nav-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center; /* cross axis */
-    align-content: center; /* line behavior */
-    width: 100%;
+    align-items: center;
 }
 
 .nav-element {
     /* sytling for the words */
+    color: var(--white-font);
+    font-family: sans-pro;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.middle-element {
+    margin-left: 2.56rem;
+    margin-right: 2.56rem;
 }
 
 /* Container A */
@@ -56,6 +79,90 @@ body {
     width: 100%;
 }
 
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.title-container .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    margin: 19.5rem 0 0 0;
+    padding: 0;
+
+    color: var(--white-font);
+    text-align: center;
+    font-family: sans-pro;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title-container .subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    color: var(--white-font);
+    text-align: center;
+    font-family: sans-pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title-container .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    margin-top: 2.5rem;
+
+    width: 162px;
+    height: 44px;
+    flex-shrink: 0;
+
+    color: var(--white-font);
+    text-align: center;
+    font-family: sans-pro;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 22px;
+    background-color: var(--button-color);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);;
+}
+
+.title-container .paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    max-width: 39.81rem;
+
+    margin-top: 4.06rem;
+    margin-bottom: 7.18rem;
+
+    color: var(--white-font);
+    text-align: center;
+    font-family: sans-pro;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
 
 /* Container B */
 .container-B {
@@ -65,6 +172,16 @@ body {
     align-items: center; /* cross axis */
     align-content: center; /* line behavior */
     width: 100%;
+    border: var(--border);
+}
+
+.container-B .paragraph {
+
+}
+
+.B1-image-text {
+    border: var(--border);
+    
 }
 
 /* Container C */
@@ -75,6 +192,7 @@ body {
     align-items: center; /* cross axis */
     align-content: center; /* line behavior */
     width: 100%;
+    border: var(--border);
 }
 
 /* Container D */
@@ -85,6 +203,7 @@ body {
     align-items: center; /* cross axis */
     align-content: center; /* line behavior */
     width: 100%;
+    border: var(--border);
 }
 
 /* Footer */
@@ -95,6 +214,7 @@ body {
     align-items: center; /* cross axis */
     align-content: center; /* line behavior */
     width: 100%;
+    border: var(--border);
 }
 
 .footer-logo-links {
