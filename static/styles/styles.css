@@ -1,0 +1,37 @@
+/* Custom Variables */
+
+/* Fonts */
+
+/* Background */
+
+body {
+    background-blend-mode: normal, color;
+    background-image: url(/static/images/background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex: 0;
+    margin: 0px;
+    width: 100%;
+    background-color: black;
+}
+
+/* Header Styles */
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-element {
+    /* sytling for the words */
+}
