@@ -209,6 +209,7 @@ body {
     font-weight: 400;
     line-height: 26px;
     margin-top: 2.5rem;
+    margin-bottom: 6rem;
     max-width: 39.81rem;
 }
 
@@ -230,9 +231,8 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 26px;
-    margin-top: 6.06rem;
-    margin-left: .5rem;
-    margin-right: .5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     margin-bottom: 6rem;
 }
 
@@ -370,6 +370,7 @@ form .button:hover {
 .footer-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center; /* cross axis */
     align-content: center; /* line behavior */
@@ -396,8 +397,14 @@ form .button:hover {
     opacity: 0.3517;
 }
 
-@media (max-width: 481px) and (max-width: 900px) {
-    
+@media (min-width: 481px) and (max-width: 768px) {
+    .title-container .title,
+    .title-container .subtitle,
+    .title-container .paragraph,
+    .container-B .paragraph,
+    .container-C .paragraph {
+        padding: var(--phone-padding);
+    }
 }
 
 @media (max-width: 480px) {
@@ -432,11 +439,34 @@ form .button:hover {
     .title-container .title,
     .title-container .subtitle,
     .title-container .paragraph,
-    .container-B .paragraph {
+    .container-B .paragraph,
+    .container-C .paragraph {
         padding: var(--phone-padding);
     }
 
     .title-container .paragraph {
+        margin-top: 3rem;
+    }
+
+    .shape {
+        margin-top: 3.5rem;
+    }
+
+    .footer-logo-links {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .footer-logo-links .logo {
+        margin-top: 3rem;
+    }
+
+    .footer-logo-links .social-media {
+        margin-top: 3rem;
+    }
+
+    .copyright {
         margin-top: 3rem;
     }
 }
