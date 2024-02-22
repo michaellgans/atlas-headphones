@@ -6,6 +6,8 @@
     --black-font: #071629;
     --accent-color: #FF6565;
     --border: solid 2px red;
+
+    --phone-padding: 0 1rem 0 1rem;
 }
 
 /* Fonts */
@@ -46,6 +48,10 @@ body {
     padding-top: 1.68rem;
 }
 
+.hamburger {
+    display: none;
+}
+
 .logo {
     width: 10.06rem;
 }
@@ -64,6 +70,10 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.nav-element a:hover {
+    opacity: 0.9;
 }
 
 .middle-element {
@@ -147,6 +157,11 @@ body {
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);;
 }
 
+.title-container .button:hover {
+    color: var(--accent-color);
+    opacity: 0.9;
+}
+
 .title-container .paragraph {
     display: flex;
     justify-content: center;
@@ -177,6 +192,15 @@ body {
     background-color: var(--color-white);
 }
 
+.container-B .title {
+    color: var(--black-font);
+    font-family: sans-pro;
+    font-size: 32px;
+    font-weight: 600;
+
+    margin-top: 6.87rem;
+}
+
 .container-B .paragraph {
     color: var(--black-font);
     text-align: center;
@@ -184,7 +208,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    margin-top: 12.5rem;
+    margin-top: 2.5rem;
     max-width: 39.81rem;
 }
 
@@ -207,13 +231,22 @@ body {
     font-weight: 400;
     line-height: 26px;
     margin-top: 6.06rem;
-    margin-left: 1.68rem;
-    margin-right: 1.68rem;
-    margin-bottom: 6.87rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-bottom: 6rem;
 }
 
 .B1-image-text .icon {
     margin-bottom: 3rem;
+}
+
+.B1-image-text .icon-subtitle {
+    color: var(--black-font);
+    text-align: center;
+    font-family: sans-pro;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
 }
 
 .B1-image-text .text {
@@ -236,8 +269,17 @@ body {
     background-color: #071629;
 }
 
+.container-C .title {
+    color: var(--color-white);
+    text-align: center;
+    font-family: sans-pro;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 8.81rem;
+}
+
 .container-C .paragraph {
-    margin-top: 13.81rem;
+    margin-top: 2.5rem;
     color: var(--white-font);
     text-align: center;
     font-family: sans-pro;
@@ -274,11 +316,54 @@ body {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
     height: 335px;
     width: 373px;
     margin-top: 110px;
     margin-bottom: 130px;
-    border: var(--border);
+}
+
+.form-title {
+    color: var(--black-font);
+    text-align: center;
+    font-family: sans-pro;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+}
+
+.entry-field {
+    border-bottom: solid 1px rgba(7, 22, 41, 0.1745);
+    padding-bottom: 0.625rem;
+    margin-bottom: 2.875rem;
+
+    color: var(--black-font);
+    font-family: sans-pro;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+form .button {
+    align-self: center;
+
+    width: 162px;
+    height: 44px;
+    flex-shrink: 0;
+
+    color: var(--white-font);
+    text-align: center;
+    font-family: sans-pro;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 22px;
+    background-color: var(--accent-color);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.50);;
+}
+
+form .button:hover {
+    opacity: 0.9;
 }
 
 /* Footer */
@@ -309,4 +394,49 @@ form {
     font-size: 12px;
     font-weight: 400;
     opacity: 0.3517;
+}
+
+@media (max-width: 481px) and (max-width: 900px) {
+    
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        justify-content: space-around;
+        padding-top: .5rem;
+    }
+
+    .header-container .logo {
+        justify-content: center;
+        position: absolute;
+    }
+
+    .header-container .hamburger {
+        display: flex;
+        z-index: -1;
+        position: relative;
+    }
+
+    .header-container .hamburger:active {
+        transition: ease-out;
+    }
+
+    .nav-container .nav-element {
+        display: none;
+    }
+
+    .title-container .title {
+        margin-top: 9.5rem;
+    }
+
+    .title-container .title,
+    .title-container .subtitle,
+    .title-container .paragraph,
+    .container-B .paragraph {
+        padding: var(--phone-padding);
+    }
+
+    .title-container .paragraph {
+        margin-top: 3rem;
+    }
 }
